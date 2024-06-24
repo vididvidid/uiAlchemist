@@ -1,0 +1,211 @@
+ /* Include custom font */
+ @font-face {
+    font-family: "Danhda";
+    src: url("path/to/Danhda.woff2") format("woff2"),
+      url("path/to/Danhda.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* Import Manrope from Google Fonts */
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+
+  body,
+  html {
+    margin: 10px;
+    padding: 0;
+    background-color: black;
+    font-family: "Manrope", sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .custom-font {
+    font-family: "Danhda Do", sans-serif; /* Custom font */
+  }
+  .main {
+    /* height: calc(100vh - 40px);
+    margin-bottom: 1vh; */
+  }
+  .firstRow {
+    margin: 0;
+    margin-right: 20px;
+    padding: 0;
+    background-color: black;
+  }
+  .firstRowCol1 {
+    /* height: 32.5vh; */
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: #b15cff;
+  }
+  .firstRowCol2 {
+    /* height: 61vh; */
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+  }
+  .secondRow {
+    margin: 0;
+    margin-right: 20px;
+    padding: 0;
+  }
+  .secondRowCol1 {
+    /* height: 32.5vh; */
+    margin-bottom: 15px;
+  }
+  .secondRowCol2 {
+    /* height: 29.5vh; */
+    margin:0;
+    margin-bottom: 5px;
+    padding:0;
+    border-radius: 20px;
+    background-color: #181818;
+    color:white;
+  }
+  .secondRowCol3 {
+    /* height: 30vh; */
+    padding: 0;
+    padding-top: 20px;
+  }
+  .finalCol {
+    margin: 0;
+    padding: 0;
+  }
+  .finalRow {
+    /* height: 60vh; */
+    margin: 0;
+    padding: 0;
+  }
+  .finalBottomCol {
+    position: relative;
+    /* height: 33.5vh; */
+    margin: 0;
+    /* margin-top: 1.5vh; */
+    border-radius: 20px;
+    background-color: white;
+    padding: 5px;
+  }
+  .finalColRow1 {
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: #181818;
+  }
+  .finalColRow2 {
+  }
+  .final2ndColRow1 {
+    background-color: #b15cff;
+    /* height: 12vh; */
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .final2ndColRow2 {
+    background-color: #d5ff5d;
+    padding-top: 120px;
+    /* height: 46.5vh; */
+    border-radius: 20px;
+  }
+  .secondRowCol3one {
+    border-radius: 20px;
+    background-color: #181818;
+  }
+  .secondRowCol3two {
+    border-radius: 20px;
+    background-color: #d5ff5d;
+  }
+  .responsive-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  .icon-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 5px;
+  }
+  .text-container {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+  }
+  .text-container p {
+    margin: 0; /* Remove default margin */
+  }
+  /* CSS for spinning animation */
+/* CSS for spinning animation */
+.secondRowCol1 img {
+animation-play-state: paused; /* Pause animation on hover */
+}
+
+.secondRowCol1 img:hover {
+
+transition: transform 0.3s ease; /* Smooth transition for initial hover */
+animation: spin 15s linear infinite; /* Animation for continuous spinning */
+}
+
+
+
+.navigation-item {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+}
+
+.navigation-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -30px; 
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: purple; 
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.navigation-item:hover::after {
+    opacity: 1;
+    animation: blink 4s infinite; /* Blinking animation */
+}
+
+.rotate-container {
+    display: inline-block;
+    transform: rotate(10deg);
+    transition: transform 0.5s ease;
+}
+
+.rotate-container:hover {
+    transform: rotate(0deg);
+}
+
+/* img {
+    display: block;
+    width: 100%;
+    height: 100%;
+} */
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes spin {
+0% {
+transform: rotate(0deg); /* Start spinning from 0 degrees */
+}
+100% {
+transform: rotate(360deg); /* End spinning at 360 degrees (full circle) */
+}
+}
